@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <modules>
+        <subdirectories-modules/>
+    </modules>
+
+    <required-libraries>
+        <group>
+            <groupId>dev.webfx</groupId>
+            <version>0.1.0-SNAPSHOT</version>
+            <webfx-library name="webfx-lib-medusa"/>
+        </group>
+    </required-libraries>
+
+</project>
