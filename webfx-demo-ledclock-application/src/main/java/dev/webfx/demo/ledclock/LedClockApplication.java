@@ -1,7 +1,6 @@
 package dev.webfx.demo.ledclock;
 
 import eu.hansolo.medusa.Clock;
-import eu.hansolo.medusa.skins.MorphingClockSkin;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Insets;

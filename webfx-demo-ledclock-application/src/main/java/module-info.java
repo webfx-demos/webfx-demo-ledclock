@@ -3,8 +3,10 @@
 module webfx.demo.ledclock.application {
 
     // Direct dependencies modules
+    requires java.base;
     requires javafx.controls;
     requires javafx.graphics;
+    requires webfx.extras.led;
     requires webfx.lib.medusa;
 
     // Exported packages
