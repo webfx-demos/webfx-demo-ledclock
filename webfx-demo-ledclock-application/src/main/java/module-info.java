@@ -3,11 +3,11 @@
 module webfx.demo.ledclock.application {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.controls;
     requires javafx.graphics;
     requires webfx.extras.led;
     requires webfx.lib.medusa;
+    requires webfx.platform.uischeduler;
 
     // Exported packages
     exports dev.webfx.demo.ledclock;
