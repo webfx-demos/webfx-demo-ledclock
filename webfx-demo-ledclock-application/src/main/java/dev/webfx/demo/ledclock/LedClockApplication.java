@@ -33,6 +33,7 @@ public final class LedClockApplication extends Application {
 
         createMorphingClock();
 
+        clock.setTimeMs(System.currentTimeMillis());
         new AnimationTimer() {
             @Override
             public void handle(long now) {
