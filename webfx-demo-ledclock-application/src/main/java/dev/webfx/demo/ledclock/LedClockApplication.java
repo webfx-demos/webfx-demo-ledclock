@@ -1,9 +1,9 @@
 package dev.webfx.demo.ledclock;
 
 import dev.webfx.extras.led.Led;
-import dev.webfx.platform.uischeduler.UiScheduler;
 import eu.hansolo.medusa.Clock;
 import eu.hansolo.medusa.skins.MorphingClockSkin;
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -33,12 +33,12 @@ public final class LedClockApplication extends Application {
 
         createMorphingClock();
 
-        updateClockTime();
-        UiScheduler.schedulePeriodic(1000, this::updateClockTime);
-    }
-
-    private void updateClockTime() {
-        clock.setTimeMs(System.currentTimeMillis());
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                clock.setTimeMs(System.currentTimeMillis());
+            }
+        }.start();
     }
 
     private void createClock() {
@@ -53,7 +53,7 @@ public final class LedClockApplication extends Application {
         createClock();
         clock.setMinuteColor(Color.BLUE);
         clock.setHourColor(Color.GREEN);
-        Skin skin = new MorphingClockSkin(clock) {
+        Skin<Clock> skin = new MorphingClockSkin(clock) {
             private final Led[] leds = new Led[2 * 3]; // ON / OFF * HH MM SS
             private int matrixIndex = -1;
 
