@@ -25,7 +25,7 @@ final class LedMatrixPane extends Pane {
     private static Led createLed() {
         Led led = Led.create(Color.RED);
         led.setShowBorder(false);
-        led.setShowReflectionWhenNotHighlighted(true);
+        led.setShowReflectionWhenNotHighlighted(false);
         led.setManaged(false);
         return led;
     }
@@ -65,7 +65,9 @@ final class LedMatrixPane extends Pane {
         if (dotSize == 0 || ON_PAINT == null || OFF_PAINT == null)
             return;
 
-        Color onColor = ((Color) ON_PAINT).brighter(), offColor = onColor.darker().darker().darker().darker().darker().darker();
+        Color onColor = (Color) ON_PAINT, offColor = onColor;
+        onColor = onColor.brighter().brighter().brighter().brighter();
+        offColor = offColor.darker().darker().darker().darker().darker().darker();
 
         for (int row = 0 ; row < 15 ; row++) {
             x = X;
