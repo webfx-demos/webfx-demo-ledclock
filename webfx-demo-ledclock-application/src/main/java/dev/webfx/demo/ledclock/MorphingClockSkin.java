@@ -43,7 +43,7 @@ final class MorphingClockSkin extends ClockSkinBase {
     private                double            aspectRatio           = 0.26506024;
     private                double            width;
     private                double            height;
-    private CanvasMatrixPane pane;
+    private LedMatrixPane pane;
     private                double            dotSize;
     private                double            spacer;
     private                double            digitSpacer;
@@ -155,7 +155,7 @@ final class MorphingClockSkin extends ClockSkinBase {
             }
         }
 
-        pane = new CanvasMatrixPane();
+        pane = new LedMatrixPane();
         pane.setBorder(new Border(new BorderStroke(clock.getBorderPaint(), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(clock.getBorderWidth()))));
         pane.setBackground(new Background(new BackgroundFill(clock.getBackgroundPaint(), CornerRadii.EMPTY, Insets.EMPTY)));
 
