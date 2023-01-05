@@ -7,7 +7,6 @@ module webfx.demo.ledclock.application {
     requires javafx.graphics;
     requires webfx.extras.led;
     requires webfx.lib.medusa;
-    requires webfx.platform.uischeduler;
 
     // Exported packages
     exports dev.webfx.demo.ledclock;
