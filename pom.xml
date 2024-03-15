@@ -36,6 +36,7 @@
         <module>webfx-demo-ledclock-application</module>
         <module>webfx-demo-ledclock-application-gluon</module>
         <module>webfx-demo-ledclock-application-gwt</module>
+        <module>webfx-demo-ledclock-application-j2cl</module>
         <module>webfx-demo-ledclock-application-openjfx</module>
     </modules>
 
