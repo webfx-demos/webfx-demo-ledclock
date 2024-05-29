@@ -82,7 +82,6 @@
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
                         <list>javafx/scene/control/skin/checkbox/[^/]+$</list>
                     </resourcesList>
-
                 </configuration>
             </plugin>
         </plugins>
